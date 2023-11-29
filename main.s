@@ -1,6 +1,6 @@
 	.file	"main.c"
 	.option nopic
-	.attribute arch, "rv64i2p0"
+	.attribute arch, "rv64i2p0_a2p0_c2p0"
 	.attribute unaligned_access, 0
 	.attribute stack_align, 16
 	.text
@@ -9,7 +9,7 @@
 .LC1:
 	.string	"%d "
 	.text
-	.align	2
+	.align	1
 	.globl	main
 	.type	main, @function
 main:
