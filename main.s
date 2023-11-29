@@ -32,7 +32,7 @@ main:
 	sd	a5,40(sp)
 	addi	a1,sp,8
 	li	a0,10
-	call	ISort
+	call	InsertionSort
 	addi	s0,sp,8
 	addi	s2,sp,48
 	lui	s1,%hi(.LC1)
