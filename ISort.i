@@ -2,7 +2,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "ISort.c"
-void InsertionSort(int n, int mass[]) {
+void InsertionSort(int n, int *mass) {
     int newElement, location;
 
     for (int i = 1; i < n; i++) {
