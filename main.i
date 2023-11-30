@@ -1275,7 +1275,7 @@ _putchar_unlocked(int _c)
 
 
 # 3 "ISort.h"
-void InsertionSort(int n, int mass[]);
+void InsertionSort(int n, int *mass);
 # 3 "main.c" 2
 int main() {
     int a[10] = {-10, 0, 10, 9, 8, 7, 1, 2, 5, 5};
