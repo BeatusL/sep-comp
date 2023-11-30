@@ -40,13 +40,13 @@ typedef short int __int16_t;
 
 typedef short unsigned int __uint16_t;
 # 77 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
-typedef int __int32_t;
+typedef long int __int32_t;
 
-typedef unsigned int __uint32_t;
+typedef long unsigned int __uint32_t;
 # 103 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
-typedef long int __int64_t;
+typedef long long int __int64_t;
 
-typedef long unsigned int __uint64_t;
+typedef long long unsigned int __uint64_t;
 # 134 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
 typedef signed char __int_least8_t;
 
@@ -56,15 +56,15 @@ typedef short int __int_least16_t;
 
 typedef short unsigned int __uint_least16_t;
 # 182 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
-typedef int __int_least32_t;
+typedef long int __int_least32_t;
 
-typedef unsigned int __uint_least32_t;
+typedef long unsigned int __uint_least32_t;
 # 200 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
-typedef long int __int_least64_t;
+typedef long long int __int_least64_t;
 
-typedef long unsigned int __uint_least64_t;
+typedef long long unsigned int __uint_least64_t;
 # 214 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\machine\\_default_types.h" 3
-typedef long int __intmax_t;
+typedef long long int __intmax_t;
 
 
 
@@ -72,7 +72,7 @@ typedef long int __intmax_t;
 
 
 
-typedef long unsigned int __uintmax_t;
+typedef long long unsigned int __uintmax_t;
 
 
 
@@ -80,19 +80,19 @@ typedef long unsigned int __uintmax_t;
 
 
 
-typedef long int __intptr_t;
+typedef int __intptr_t;
 
-typedef long unsigned int __uintptr_t;
+typedef unsigned int __uintptr_t;
 # 46 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\cdefs.h" 2 3
 
 # 1 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 1 3 4
 # 209 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 3 4
-typedef long unsigned int size_t;
+typedef unsigned int size_t;
 # 48 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\cdefs.h" 2 3
 # 36 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\stdio.h" 2 3
 # 1 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 1 3 4
 # 143 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 3 4
-typedef long int ptrdiff_t;
+typedef int ptrdiff_t;
 # 321 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 3 4
 typedef int wchar_t;
 # 415 "c:\\sysgcc\\risc-v\\lib\\gcc\\riscv64-unknown-elf\\10.1.0\\include\\stddef.h" 3 4
@@ -209,9 +209,9 @@ typedef long __key_t;
 
 typedef long _fpos_t;
 # 131 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\_types.h" 3
-typedef long unsigned int __size_t;
+typedef unsigned int __size_t;
 # 147 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\_types.h" 3
-typedef long signed int _ssize_t;
+typedef signed int _ssize_t;
 # 158 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\_types.h" 3
 typedef _ssize_t __ssize_t;
 
@@ -244,7 +244,7 @@ typedef unsigned long __clock_t;
 
 
 
-typedef long __time_t;
+typedef __int_least64_t __time_t;
 
 
 
@@ -276,8 +276,13 @@ typedef unsigned long __useconds_t;
 
 typedef __builtin_va_list __va_list;
 # 16 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\reent.h" 2 3
-# 25 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\reent.h" 3
-typedef unsigned int __ULong;
+
+
+
+
+
+
+typedef unsigned long __ULong;
 # 34 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\reent.h" 3
 # 1 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\lock.h" 1 3
 # 11 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\lock.h" 3
@@ -621,7 +626,7 @@ typedef __suseconds_t suseconds_t;
 
 
 
-typedef long time_t;
+typedef __int_least64_t time_t;
 # 54 "c:\\sysgcc\\risc-v\\riscv64-unknown-elf\\include\\sys\\_timeval.h" 3
 struct timeval {
  time_t tv_sec;
@@ -1275,11 +1280,11 @@ _putchar_unlocked(int _c)
 
 
 # 3 "ISort.h"
-void InsertionSort(int n, int mass[]);
+void ISort(int n, int mass[]);
 # 3 "main.c" 2
 int main() {
     int a[10] = {-10, 0, 10, 9, 8, 7, 1, 2, 5, 5};
-    InsertionSort(10, a);
+    ISort(10, a);
     for (int i = 0; i<10; i++)
         printf("%d ", a[i]);
     return 0;
