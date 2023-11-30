@@ -1,5 +1,4 @@
-#include "ISort.h"
-void ISort(int n, int mass[]) {
+void InsertionSort(int n, int mass[]) {
     int newElement, location;
 
     for (int i = 1; i < n; i++) {
